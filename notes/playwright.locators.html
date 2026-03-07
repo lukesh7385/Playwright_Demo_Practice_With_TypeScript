@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playwright Locators Demonstration</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .section { margin-bottom: 30px; }
+    .box { padding: 10px; border: 1px solid #ccc; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Playwright Locators Demonstration</h1>
+  <p>This page demonstrates various Playwright locators with property-aligned elements.</p>
+
+  <!-- 1) getByAltText -->
+  <div class="section">
+    <h2>getByAltText()</h2>
+    <img src="https://via.placeholder.com/150" alt="Sample Image Alt Text" />
+    <p>Locate this image by its alt text.</p>
+  </div>
+
+  <!-- 2) getByText -->
+  <div class="section">
+    <h2>getByText()</h2>
+    <p class="box">This is a non-interactive text block for testing getByText.</p>
+    <span>Another static text element.</span>
+  </div>
+
+  <!-- 3) getByRole -->
+  <div class="section">
+    <h2>getByRole()</h2>
+    <button>Click Me</button>
+    <a href="#role-link">Role-based Link</a>
+    <input type="checkbox" id="check1" /> <label for="check1">Accept Terms</label>
+  </div>
+
+  <!-- 4) getByLabel -->
+  <div class="section">
+    <h2>getByLabel()</h2>
+    <form>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" />
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" />
+    </form>
+  </div>
+
+  <!-- 5) getByPlaceholder -->
+  <div class="section">
+    <h2>getByPlaceholder()</h2>
+    <input type="text" placeholder="Enter your username" />
+    <input type="password" placeholder="Enter your password" />
+  </div>
+
+  <!-- 6) getByTitle -->
+  <div class="section">
+    <h2>getByTitle()</h2>
+    <a href="#home" title="Go to Home Page">Home</a>
+    <div title="Info Box">Hover over me for info</div>
+  </div>
+
+  <!-- 7) getByTestId -->
+  <div class="section">
+    <h2>getByTestId()</h2>
+    <button data-testid="submit-btn">Submit</button>
+    <div data-testid="status-message">Status: Ready</div>
+
+    <!-- Profile elements -->
+    <div data-testid="profile-email">john.doe@example.com</div>
+    <div data-testid="profile-name">John Doe</div>
+  </div>
+</body>
+</html>
