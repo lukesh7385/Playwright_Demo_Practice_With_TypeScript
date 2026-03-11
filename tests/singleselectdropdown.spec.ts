@@ -1,6 +1,6 @@
 import {test, expect, Locator} from "@playwright/test";
 
-
+// Static drop down (select tag)
 test("Single Select Drop Down", async ({ page }) => {
 
     await page.goto("https://testautomationpractice.blogspot.com/");
