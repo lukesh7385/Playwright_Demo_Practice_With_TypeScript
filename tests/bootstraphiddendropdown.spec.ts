@@ -32,11 +32,31 @@ test("bootstrap hidden dropdown", async ({ page }) => {
   const count: number = await options.count();
   console.log("Number of options in a dropdown:", count);
 
-  console.log("Printing all the options......")
   // print all the options
+  console.log("All the text contents:", await options.allTextContents());
+
+  console.log("Printing all the options......")
   for(let i=0; i<count; i++)
   {
-    console.log(await options.nth(i).innerText());
+    // console.log(await options.nth(i).innerText());
+    console.log(await options.nth(i).textContent());
   }
+
+  // Select/click on option
+  for(let i = 0; i < count; i++)
+  {
+    const text = await options.nth(i).innerText();
+    if(text === 'Automaton Tester')
+    {
+      await options.nth(i).click();
+      break;
+    }
+  }
+
+  await page.waitForTimeout(5000);
+
+
+  // Assignment on myntra.com search box   use (f12) for locate the element
+  // similarlly try other element similarly bootstrap dropdown
 
 });
