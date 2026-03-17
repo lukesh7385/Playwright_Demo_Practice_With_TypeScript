@@ -36,7 +36,7 @@ test("Radio Button Actions", async ({ page })=> {
 
     await page.goto("https://testautomationpractice.blogspot.com/");
 
-    const maleRadio: Locator = await page.locator("#male"); // Male radio button
+    const maleRadio: Locator = page.locator("#male"); // Male radio button
 
     await expect(maleRadio).toBeVisible();
     await expect(maleRadio).toBeEnabled();
