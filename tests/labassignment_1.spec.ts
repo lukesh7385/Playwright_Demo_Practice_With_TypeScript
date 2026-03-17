@@ -55,9 +55,6 @@ test("Input Box Validation: FirstName", async ({ page }) => {
 });
 
 
-
-
-
 // Assignment 2:
 test.only("Radio Button Validation: Gender", async ({ page }) => {
 
@@ -87,8 +84,6 @@ test.only("Radio Button Validation: Gender", async ({ page }) => {
     console.log("Male Radio Button Checked Statsu:", await maleRadioButton.isChecked());
     console.log("Female Radio Button Checked Statsu:", await femaleRadioButton.isChecked());
 
-
-
     // Select Female radio button
     await femaleRadioButton.check();
     expect(await femaleRadioButton.isChecked()).toBeTruthy();
@@ -100,6 +95,10 @@ test.only("Radio Button Validation: Gender", async ({ page }) => {
     console.log("Female Radio Button Checked Statsu:", await femaleRadioButton.isChecked());
     console.log("Male Radio Button Checked Statsu:", await maleRadioButton.isChecked());
 
+});
 
+
+// Assignment 3:
+test("Checkbox Validation: Hobbies", async ({ page }) => {
     
 });
