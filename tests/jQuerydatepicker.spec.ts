@@ -18,13 +18,11 @@ async function selectDate(targetYear: string, targetMont: string, targetDate: st
             await page.locator(".ui-datepicker-next").click(); // future
         }
         else{
-
             await page.locator(".ui-datepicker-prev").click(); // past
         };
 
 
     }
-
     const allDates = await page.locator(".ui-datepicker-calendar td").all();
 
     for (let dt of allDates)
@@ -36,12 +34,6 @@ async function selectDate(targetYear: string, targetMont: string, targetDate: st
         };
     };
 };
-
-
-
-
-
-
 
 
 
