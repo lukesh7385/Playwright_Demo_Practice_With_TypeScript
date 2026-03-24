@@ -72,7 +72,6 @@ test.only("Prompt Dialog", async ({ page }) => {
         // dialog.dismiss(); // close dialog by dimissing
     });
     await page.locator("#promptBtn").click(); // opens prompt dialog
-
     const text: string = await page.locator("#demo").innerText();
     console.log("Output text:", text);
     await expect(page.locator("#demo")).toHaveText("Hello Lukesh! How are you today?");
