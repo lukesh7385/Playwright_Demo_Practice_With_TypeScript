@@ -56,7 +56,7 @@ test("Input Box Validation: FirstName", async ({ page }) => {
 
 
 // Assignment 2:
-test.only("Radio Button Validation: Gender", async ({ page }) => {
+test("Radio Button Validation: Gender", async ({ page }) => {
 
     await page.goto("https://demo.automationtesting.in/Register.html");
 
@@ -99,6 +99,106 @@ test.only("Radio Button Validation: Gender", async ({ page }) => {
 
 
 // Assignment 3:
-test("Checkbox Validation: Hobbies", async ({ page }) => {
+test.only("Checkbox Validation: Hobbies", async ({ page }) => {
+
+    await page.goto("https://demo.automationtesting.in/Register.html");
+
+    // 1. Select the checkbox for "Hockey".
+    // await page.locator("#checkbox3").check();
+
+
+
+    // 2. Capture all available hobbies and print the count
+    const allHobbies: Locator[] = await page.locator(".col-md-4 div input[type='checkbox']").all();
+    const count = allHobbies.length;
+    console.log("Count of all the Hobbies is:", count);
+    expect(count).toBe(3);
+
+
+   /*  // 3. Select all hobbies using loop.
+    for(let hobb of allHobbies)
+    {
+        if(await hobb.isChecked())
+        {
+            continue;
+
+        }
+        else{
+            await hobb.check();
+        }
+    } */
+
     
+    
+    
+    // // 4. select the last 2 hobbies using loop
+    // for(let i=allHobbies.length-2; i < allHobbies.length; i++)
+    // {
+    //     await allHobbies[i].check()
+    // }
+            
+    // await page.waitForTimeout(5000); 
+    
+
+
+/*     // 5. Select first 2 Hobbies using loop.
+    for(let i = 0; i < 2; i++)
+    {
+        await allHobbies[i].check();
+    } */
+
+
+
+   /*  // 6. Select hobbies randomly using a loop
+    for(let i = 0; i< allHobbies.length; i++){
+        if(i === 0 || i === 2){
+            await allHobbies[i].check();
+        }
+    } */
+
+
+
+    // 7. Select hobbies based on the values using a switch-case-statement
+    type Hobby = 'Cricket' | 'Movies' | 'Hockey';
+
+    async function selectHobby(page: any, hobby: Hobby){
+        switch(hobby){
+            case 'Cricket':
+                await page.locator("[value='Cricket']").check();
+                break;
+            
+            case 'Movies':
+                await page.locator("[value='Movies']").check();
+                break;
+
+            case 'Hockey':
+                await page.locator("[value='Hockey']").check();
+                break;
+
+            default:
+                const _exhaustiveCheck: never = hobby;
+                return _exhaustiveCheck;
+        }
+    }
+
+// calling the function
+// await selectHobby(page, "Cricket");
+
+// Asserting the result
+// await expect(page.locator("[value='Cricket']")).toBeChecked();
+
+
+
+
+
+// user can select multiple hobbies
+const myHobbies: ('Cricket' | 'Movies' | 'Hockey')[] = ['Cricket', 'Hockey'];
+
+for (const hobby of myHobbies) 
+{
+    await selectHobby(page, hobby);
+}
+
 });
+
+
