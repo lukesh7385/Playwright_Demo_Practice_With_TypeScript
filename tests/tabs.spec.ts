@@ -29,7 +29,4 @@ test("handel tabs", async () => {
      console.log("Title of the Parent page:", await parentPage.title());
      console.log("Title of the Child page:",  await childPage.title());
 
-
-
-    
 });
