@@ -22,3 +22,6 @@ npx playwright codegen -o tests/codegentest.spec.ts --browser firefox
 
 // To specify the size of the browser
 npx playwright codegen --output tests/codegensizetest.spec.ts --viewport-size "1280, 720"
+
+// To run the test in debug mode
+npx playwright test tests/codegentest1.spec.ts --headed --debug
