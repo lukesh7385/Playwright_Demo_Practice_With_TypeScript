@@ -18,7 +18,7 @@ export default defineConfig({
   // timeout: 60000,
 
   // To apply a longer wait for all expect conditions (default is 5000 ms / 5 secs) - by lukesh
-  // expect: {timeout: 10000},
+  expect: {timeout: 10000},
 
   /* Run tests in files in parallel */
   fullyParallel: true,

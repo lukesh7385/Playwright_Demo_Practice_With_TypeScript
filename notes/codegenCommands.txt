@@ -1,0 +1,24 @@
+
+************************** codegen commands ***************************
+
+// To open codegen window
+npx playwtight codegen
+
+// To open codegen window and automatically create the file in test folder
+npx playwtight codegen -o tests/codegentest.spec.ts
+            // OR
+npx playwtight codegen --output tests/codegentest.spec.ts
+
+
+// you can specify device also
+npx playwtight codegen -o tests/codegentest.spec.ts --device "iPhone 15"
+
+
+// for specific browser
+npx playwright codegen -o tests/codegentest.spec.ts -b firefox
+                // OR
+npx playwright codegen -o tests/codegentest.spec.ts --browser firefox
+
+
+// To specify the size of the browser
+npx playwright codegen --output tests/codegensizetest.spec.ts --viewport-size "1280, 720"
