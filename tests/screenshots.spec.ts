@@ -34,7 +34,7 @@ test.only("Screenshot from config", async ({ page }) => {
   await page.locator('#loginusername').click();
   await page.locator('#loginusername').fill('lukesh01');
   await page.locator('#loginpassword').click();
-  await page.locator('#loginpassword').fill('test@0123'); // password incorrect
+  await page.locator('#loginpassword').fill('test@01');
   await page.getByRole('button', { name: 'Log in' }).click();
   await expect(page.locator('#nameofuser')).toContainText('Welcome lukesh01');
   await page.getByRole('link', { name: 'Log out' }).click();

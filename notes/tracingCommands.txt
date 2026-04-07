@@ -1,0 +1,44 @@
+// To create trace report using plawright.spec.ts 
+(it is Global for all the test and automatically attached to the test report)
+
+
+// To create trace report (it will create trace file in test-results folder)
+
+npx playwright test tests/tracing.spec.ts --headed --trace on
+
+Note: it will attached to the html report automatically and we can see the trace report using command 
+
+npx playwright show-report  
+
+
+
+// To create trace report using code (used context next to the page fixture)
+
+// first statement to start the trace
+context.tracing.start({screenshots: true, snapshots: true});
+
+// code
+
+// last statement to stop the trace
+ context.tracing.stop({path:'trace.zip'});
+
+// 1. To open trace report when we create using code
+   npx playwright show-trace trace.zip
+
+// 2. To open trace report when we create using code 
+   https://trace.playwright.dev/
+   Go to the above site which is utility devloped by playwright it self
+   and drug and drop the zip file or upload the file
+
+
+
+
+----------------------------------------------------------
+
+// Note: - What we have in a trace file to trace the test
+
+// 1. Actions
+// 2. Metadata
+// 3. Action, Befor, After
+// 4. Time Traval feature
+// Locator, Call, Log, Errors, Console, Network, Source, Attachments
