@@ -1,0 +1,13 @@
+// To Retries flaky test for all the test cases
+ex:- npx playwright test --retries=3
+
+// To Retries flaky test for all the test cases (in headed mode)
+ex:- npx playwright test --retries=3 --headed
+
+
+// To Retries flaky test for specific test
+ex:- npx playwright test tests/mytest.spec.ts --retries=3
+
+
+// To Retries flaky test for specific test (in headed mode)
+ex:- npx playwright test tests/mytest.spec.ts --retries=3 --headed

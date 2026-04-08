@@ -20,10 +20,6 @@ To view trace file (3 ways)
 */
 
 
-
-
-
-
 import {test, expect} from "@playwright/test";
 
 test("Screenshot from config", async ({ page, context}) => {
