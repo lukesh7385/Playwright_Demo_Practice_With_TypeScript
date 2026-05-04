@@ -14,6 +14,12 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 export default defineConfig({
   testDir: './tests',
 
+  grep: /@sanity/, // specifying tag by lukesh
+  grepInvert: /@regression/, // secifying tag by lukesh (combination of both grep and grepInvert to run test which is associated only with the sanity tag)
+
+  // grep: /@regression/, // specifying tag by lukesh
+  // grep: /(?=.*@sanity)(?=.*@regression)/, // specifying tag by lukesh
+
   // To chenge timeout globally for all tests (default is 30000 ms / 30 secs) by lukesh
   // timeout: 60000,
 

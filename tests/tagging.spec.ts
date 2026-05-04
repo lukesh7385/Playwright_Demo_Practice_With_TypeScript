@@ -23,7 +23,7 @@ test3 - regression
     npx playwright test tests/tagging.spec.ts --grep "@sanity | @regression"
 
 
-5. Run sanity tests which are not belongs to regression
+5. Run sanity tests which are not belongs to regression 
     npx playwright test tests/tagging.spec.ts --grep "@sanity" --grep-invert "@regression"
     
 */
