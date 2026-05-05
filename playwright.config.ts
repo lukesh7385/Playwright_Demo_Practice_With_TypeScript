@@ -14,8 +14,8 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 export default defineConfig({
   testDir: './tests',
 
-  grep: /@sanity/, // specifying tag by lukesh
-  grepInvert: /@regression/, // secifying tag by lukesh (combination of both grep and grepInvert to run test which is associated only with the sanity tag)
+  //grep: /@sanity/, // specifying tag by lukesh
+  //grepInvert: /@regression/, // secifying tag by lukesh (combination of both grep and grepInvert to run test which is associated only with the sanity tag)
 
   // grep: /@regression/, // specifying tag by lukesh
   // grep: /(?=.*@sanity)(?=.*@regression)/, // specifying tag by lukesh
@@ -27,7 +27,7 @@ export default defineConfig({
   // expect: {timeout: 10000},
 
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -37,7 +37,8 @@ export default defineConfig({
   // retries: 3, // done by Lukesh
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  // workers: process.env.CI ? 1 : undefined,
+  workers:3, // Set number of workers by lukesh
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -60,13 +61,17 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      // fullyParallel: true
     },
 
-    /* {
+  /*
+    {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
+  */
 
+  /*
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
