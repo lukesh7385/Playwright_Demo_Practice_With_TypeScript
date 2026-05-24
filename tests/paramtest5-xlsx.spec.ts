@@ -1,9 +1,7 @@
 /* 
 Pre-requisite: Install the xlsx Library
     npm install xlsx
-
 */
-
 
 import { test, expect } from '@playwright/test';
 import fs from "fs";

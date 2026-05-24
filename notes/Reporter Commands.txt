@@ -1,0 +1,25 @@
+// To open report manually
+    npx playwright show-report      // from defualt folder
+    npx playwright show-report html-report      // from user created folder
+
+// To generate html report through command prompt (in default folder)
+    npx playwright test tests/reporters.spec.ts --reporter=html
+
+
+// To generate html report in user created folder
+    npx playwright test tests/reporters.spec.ts --reporter=html html-report
+
+
+// To generate "list, line, dot, junit json" through the command prompt (note: report display in terminal)
+    npx playwright test tests/reporters.spec.ts --reporter=list
+    npx playwright test tests/reporters.spec.ts --reporter=line
+    npx playwright test tests/reporters.spec.ts --reporter=dot
+ 
+    npx playwright test tests/reporters.spec.ts --reporter=junit 
+    npx playwright test tests/reporters.spec.ts --reporter=json 
+
+
+
+
+
+

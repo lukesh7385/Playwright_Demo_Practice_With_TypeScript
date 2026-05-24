@@ -1,0 +1,10 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="6.276702">
+<testsuite name="reporters.spec.ts" timestamp="2026-05-24T08:03:48.073Z" hostname="chromium" tests="3" failures="0" skipped="0" time="11.647" errors="0">
+<testcase name="logo test" classname="reporters.spec.ts" time="3.65">
+</testcase>
+<testcase name="title test" classname="reporters.spec.ts" time="3.709">
+</testcase>
+<testcase name="search test" classname="reporters.spec.ts" time="4.288">
+</testcase>
+</testsuite>
+</testsuites>
