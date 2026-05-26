@@ -1,10 +1,47 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="6.276702">
-<testsuite name="reporters.spec.ts" timestamp="2026-05-24T08:03:48.073Z" hostname="chromium" tests="3" failures="0" skipped="0" time="11.647" errors="0">
-<testcase name="logo test" classname="reporters.spec.ts" time="3.65">
+<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="12.32451">
+<testsuite name="reporters.spec.ts" timestamp="2026-05-26T19:03:45.511Z" hostname="chromium" tests="3" failures="1" skipped="0" time="24.246" errors="0">
+<testcase name="logo test" classname="reporters.spec.ts" time="7.712">
 </testcase>
-<testcase name="title test" classname="reporters.spec.ts" time="3.709">
+<testcase name="title test" classname="reporters.spec.ts" time="8.003">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\reporters-title-test-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\reporters-title-test-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\reporters-title-test-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toContain(expected) // indexOf" type="expect.toContain">
+<![CDATA[  [chromium] › reporters.spec.ts:12:6 › title test ─────────────────────────────────────────────────
+
+    Error: expect(received).toContain(expected) // indexOf
+
+    Expected substring: "Demo Web Shop1"
+    Received string:    "Demo Web Shop"
+
+      11 |
+      12 |  test('title test', async ({ page }) => {
+    > 13 |     expect(await page.title()).toContain("Demo Web Shop1");
+         |                                ^
+      14 |  });
+      15 |
+      16 |  test('search test', async ({ page }) => {
+        at C:\Users\lukesh ade\Credence Testing 8\Credence Testing 21 new batch\AutomationProject\Playwright_Demo\tests\reporters.spec.ts:13:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\reporters-title-test-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\reporters-title-test-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\reporters-title-test-chromium\error-context.md
+]]>
+</failure>
 </testcase>
-<testcase name="search test" classname="reporters.spec.ts" time="4.288">
+<testcase name="search test" classname="reporters.spec.ts" time="8.531">
 </testcase>
 </testsuite>
 </testsuites>

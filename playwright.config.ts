@@ -50,6 +50,7 @@ export default defineConfig({
             ['dot'],
             ['junit', {outputFile: 'results.xml'}],
             ['json', {outputFile: 'results.json'}],
+            ['allure-playwright']
             ], // reporter by lukesh
 
 

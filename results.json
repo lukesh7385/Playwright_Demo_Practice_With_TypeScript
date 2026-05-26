@@ -64,6 +64,10 @@
         {
           "outputFile": "results.json"
         }
+      ],
+      [
+        "C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
       ]
     ],
     "reportSlowTests": {
@@ -101,12 +105,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3650,
+                  "duration": 7712,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-24T08:03:49.265Z",
+                  "startTime": "2026-05-26T19:03:47.090Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -121,7 +125,7 @@
         },
         {
           "title": "title test",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -134,18 +138,58 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 3709,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 8003,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"Demo Web Shop1\"\u001b[39m\nReceived string:    \u001b[31m\"Demo Web Shop\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"Demo Web Shop1\"\u001b[39m\nReceived string:    \u001b[31m\"Demo Web Shop\"\u001b[39m\n    at C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\tests\\reporters.spec.ts:13:32",
+                    "location": {
+                      "file": "C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\tests\\reporters.spec.ts",
+                      "column": 32,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m  test(\u001b[32m'title test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoContain(\u001b[32m\"Demo Web Shop1\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m  })\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m  test(\u001b[32m'search test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\tests\\reporters.spec.ts",
+                        "column": 32,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"Demo Web Shop1\"\u001b[39m\nReceived string:    \u001b[31m\"Demo Web Shop\"\u001b[39m\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m  test(\u001b[32m'title test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mtitle())\u001b[33m.\u001b[39mtoContain(\u001b[32m\"Demo Web Shop1\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m  })\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m  test(\u001b[32m'search test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\tests\\reporters.spec.ts:13:32\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-24T08:03:49.236Z",
+                  "startTime": "2026-05-26T19:03:47.133Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\test-results\\reporters-title-test-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\test-results\\reporters-title-test-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\test-results\\reporters-title-test-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\lukesh ade\\Credence Testing 8\\Credence Testing 21 new batch\\AutomationProject\\Playwright_Demo\\tests\\reporters.spec.ts",
+                    "column": 32,
+                    "line": 13
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "bde4792341cd3e9e9db3-cfdeadf24336044ccfef",
@@ -169,12 +213,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 4288,
+                  "duration": 8531,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-24T08:03:49.259Z",
+                  "startTime": "2026-05-26T19:03:47.100Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -192,11 +236,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-24T08:03:48.026Z",
-    "duration": 6276.702,
-    "expected": 3,
+    "startTime": "2026-05-26T19:03:45.294Z",
+    "duration": 12324.51,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

@@ -10,7 +10,7 @@ test.beforeEach('launching app', async ({ page }) => {
  });
 
  test('title test', async ({ page }) => {
-    expect(await page.title()).toContain("Demo Web Shop");
+    expect(await page.title()).toContain("Demo Web Shop1");
  });
 
  test('search test', async ({ page }) => {
