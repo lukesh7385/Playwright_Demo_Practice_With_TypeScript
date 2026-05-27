@@ -45,12 +45,13 @@ export default defineConfig({
   // reporter: 'list', reporter by lukesh
   // reporter: [['html', {open: 'always', outputFolder: 'html-report'}]], // reporter by lukesh
   reporter: [['html', {open: 'always', outputFolder: 'html-report'}], 
-            ['list'],
+            /* ['list'],
             ['line'],
             ['dot'],
             ['junit', {outputFile: 'results.xml'}],
             ['json', {outputFile: 'results.json'}],
-            ['allure-playwright']
+            ['allure-playwright'], */
+            ['./my-custom-reporter.ts']
             ], // reporter by lukesh
 
 
